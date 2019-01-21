@@ -28,7 +28,7 @@ h1 {
 
 
 /* Submit Button, Columns, Questions, and Inputs */
-form input[type=submit] {
+.button-submit {
   background: transparent;
   border: 3px solid #fff;
   border-radius: 6px;
