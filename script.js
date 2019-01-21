@@ -32,19 +32,19 @@ function get_answer(category) {
 // Function to find the spans that need to be filled
 function fill_in_answers(answers) {
 	var home = document.querySelector('#home');  // This says make a new variable and find the HTML tag that has the ID of "home" 
-	var profession = document.querySelector('#profession');
-	var pet = document.querySelector('#pet');
-	var location = document.querySelector('#location');
+	var answer_2 = document.querySelector('#answer_2');
+	var answer_3 = document.querySelector('#answer_3');
+	var answer_1 = document.querySelector('#answer_1');
 	
 	// Fill them with the provided answers
 	home.innerText = answers['mash'];
-	profession.innerText = answers['profession'];
-	pet.innerText = answers['pet'];
-	location.innerText = answers['location'];
+	answer_2.innerText = answers['answer_2'];
+	answer_3.innerText = answers['answer_3'];
+	answer_1.innerText = answers['answer_1'];
 	home.innerHTML = answers.mash;  // Change the content of the element in the HTML doc with the id "home" to the "mash" value in answers 
-	profession.innerHTML = answers.profession;  // Change the content of the element in the HTML doc with the id "career" to the "career" value in answers 
-	pet.innerHTML = answers.pet;
-	location.innerHTML = answers.location;
+	answer_2.innerHTML = answers.answer_2;  // Change the content of the element in the HTML doc with the id "career" to the "career" value in answers 
+	answer_3.innerHTML = answers.answer_3;
+	answer_1.innerHTML = answers.answer_1;
 }
 
 // Button submit handler function
@@ -55,9 +55,9 @@ function handle_submission(evt) {
 	// Build up our answers object
 	var answers = {
 	    'mash': mash_choice(),
-	    'profession': get_answer('profession'),
-	    'pet': get_answer('pet'),
-	    'location': get_answer('location')
+	    'answer_2': get_answer('answer_2'),
+	    'answer_3': get_answer('answer_3'),
+	    'answer_1': get_answer('answer_1')
 	}
 	// Fill in the answers
 	fill_in_answers(answers);
